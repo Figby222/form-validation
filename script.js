@@ -27,6 +27,8 @@ function showError() {
 
     const confirmPasswordError = document.querySelector('.confirm-password-error');
     confirmPasswordError.textContent = userConfirmPassword.validationMessage;
+
+    console.error("error");
     
 }
 
@@ -53,6 +55,7 @@ function checkCountryError() {
 }
 
 function checkZipError() {
+    zipRegExp.lastIndex = 0; // reset regular expression for test
     if (!(zipRegExp.test(userZip.value))) {
         userZip.setCustomValidity("Please enter a valid ZIP code");
         return 1;
