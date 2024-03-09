@@ -38,7 +38,6 @@ function checkEmailError() {
         userEmail.setCustomValidity("");
         return 0;
     }
-    // userEmail.reportValidity();
 }
 
 function checkCountryError() {
@@ -49,7 +48,6 @@ function checkCountryError() {
         userCountry.setCustomValidity("");
         return 0;
     }
-    // userCountry.reportValidity();
 }
 
 function checkZipError() {
@@ -61,7 +59,6 @@ function checkZipError() {
         userZip.setCustomValidity("")
         return 0;
     }
-    // userZip.reportValidity();
 }
 
 function checkPasswordError() {
@@ -77,10 +74,6 @@ function checkPasswordError() {
         userConfirmPassword.setCustomValidity("");
         return 0;
     }
-
-    // userPassword.reportValidity();
-    // userConfirmPassword.reportValidity();
-    // userConfirmPassword.reportValidity();
 }
 
 function checkConfirmPasswordError() {
@@ -96,10 +89,6 @@ function checkConfirmPasswordError() {
         userPassword.setCustomValidity("");
         return 0;
     }
-
-    // userConfirmPassword.reportValidity();
-    // userConfirmPassword.reportValidity();
-    // userConfirmPassword.reportValidity();
 }
 
 userEmail.addEventListener('input', checkEmailError);
