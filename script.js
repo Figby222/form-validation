@@ -3,11 +3,31 @@ const userCountry = document.querySelector('#country');
 const userZip = document.querySelector('#zip-code');
 const userPassword = document.querySelector('#password');
 const userConfirmPassword = document.querySelector('#confirm-password');
+const submitBtn = document.querySelector(".form-submit");
 const zipRegExp = /\d{5}/g
 
-function checkError() {
-    
+function showError() {
+    checkEmailError();
+    checkCountryError();
+    checkZipError();
+    checkPasswordError();
+    checkConfirmPasswordError();
 
+    const emailError = document.querySelector('.email-error');
+    emailError.textContent = userEmail.validationMessage;
+
+    const countryError = document.querySelector('.country-error');
+    countryError.textContent = userCountry.validationMessage;
+
+    const zipError = document.querySelector('.zip-code-error');
+    zipError.textContent = userZip.validationMessage;
+
+    const passwordError = document.querySelector('.password-error');
+    passwordError.textContent = userPassword.validationMessage;
+
+    const confirmPasswordError = document.querySelector('.confirm-password-error');
+    confirmPasswordError.textContent = userConfirmPassword.validationMessage;
+    
 }
 
 function checkEmailError() {
@@ -77,3 +97,7 @@ userEmail.addEventListener('input', checkEmailError);
 userZip.addEventListener('input', checkZipError);
 userPassword.addEventListener('input', checkPasswordError);
 userConfirmPassword.addEventListener('input', checkConfirmPasswordError);
+submitBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    showError();
+})
