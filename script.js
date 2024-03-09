@@ -4,6 +4,7 @@ const userZip = document.querySelector('#zip-code');
 const userPassword = document.querySelector('#password');
 const userConfirmPassword = document.querySelector('#confirm-password');
 const zipRegExp = /\d{5}/g
+
 function showError() {
     if (!(userEmail.checkValidity())) {
         userEmail.setCustomValidity("Please enter a valid email address")
@@ -34,7 +35,35 @@ function checkZipError() {
     } else {
         userZip.setCustomValidity("")
     }
-    userZip.reportValidity();
+    // userZip.reportValidity();
+}
+
+function checkPasswordError() {
+    if (userPassword.value != userConfirmPassword.value) {
+        userPassword.setCustomValidity("Passwords must match");
+        userConfirmPassword.setCustomValidity("Passwords must match");
+    } else {
+        userPassword.setCustomValidity("");
+        userConfirmPassword.setCustomValidity("");
+    }
+
+    // userPassword.reportValidity();
+    // userConfirmPassword.reportValidity();
+    // userConfirmPassword.reportValidity();
+}
+
+function checkConfirmPasswordError() {
+    if (userPassword.value != userConfirmPassword.value) {
+        userConfirmPassword.setCustomValidity("Passwords must match");
+        userPassword.setCustomValidity("Passwords must match");
+    } else {
+        userConfirmPassword.setCustomValidity("");
+        userPassword.setCustomValidity("");
+    }
+
+    // userConfirmPassword.reportValidity();
+    // userConfirmPassword.reportValidity();
+    // userConfirmPassword.reportValidity();
 }
 
 userEmail.addEventListener('input', checkEmailError);
