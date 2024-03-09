@@ -3,6 +3,7 @@ const userCountry = document.querySelector('#country');
 const userZip = document.querySelector('#zip-code');
 const userPassword = document.querySelector('#password');
 const userConfirmPassword = document.querySelector('#confirm-password');
+const zipRegExp = /\d{5}/g
 function showError() {
     if (!(userEmail.checkValidity())) {
         userEmail.setCustomValidity("Please enter a valid email address")
