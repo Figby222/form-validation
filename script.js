@@ -28,4 +28,13 @@ function checkCountryError() {
     userCountry.reportValidity();
 }
 
+function checkZipError() {
+    if (!(zipRegExp.test(userZip.value))) {
+        userZip.setCustomValidity("Please enter a valid ZIP code");
+    } else {
+        userZip.setCustomValidity("")
+    }
+    userZip.reportValidity();
+}
+
 userEmail.addEventListener('input', checkEmailError);
