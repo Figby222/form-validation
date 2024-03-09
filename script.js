@@ -106,6 +106,7 @@ userEmail.addEventListener('input', checkEmailError);
 userZip.addEventListener('input', checkZipError);
 userPassword.addEventListener('input', checkPasswordError);
 userConfirmPassword.addEventListener('input', checkConfirmPasswordError);
+userCountry.addEventListener("change", checkCountryError);
 submitBtn.addEventListener('click', (e) => {
     if (
         checkEmailError() ||
