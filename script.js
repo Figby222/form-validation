@@ -27,8 +27,6 @@ function showError() {
 
     const confirmPasswordError = document.querySelector('.confirm-password-error');
     confirmPasswordError.textContent = userConfirmPassword.validationMessage;
-
-    console.error("error");
     
 }
 
