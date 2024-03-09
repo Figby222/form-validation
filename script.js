@@ -66,7 +66,8 @@ function checkZipError() {
 function checkPasswordError() {
     if (!(userPassword.value)) {
         userPassword.setCustomValidity("Please fill out this field");
-    } else if (userPassword.value != userConfirmPassword.value || !(userPassword.value)) {
+        return 1;
+    } else if (userPassword.value != userConfirmPassword.value) {
         userPassword.setCustomValidity("Passwords must match");
         userConfirmPassword.setCustomValidity("Passwords must match");
         return 1;
@@ -84,12 +85,15 @@ function checkPasswordError() {
 function checkConfirmPasswordError() {
     if (!(userConfirmPassword.value)) {
         userConfirmPassword.setCustomValidity("Please fill out this field");
+        return 1;
     } else if (userPassword.value != userConfirmPassword.value) {
         userConfirmPassword.setCustomValidity("Passwords must match");
         userPassword.setCustomValidity("Passwords must match");
+        return 1;
     } else {
         userConfirmPassword.setCustomValidity("");
         userPassword.setCustomValidity("");
+        return 0;
     }
 
     // userConfirmPassword.reportValidity();
