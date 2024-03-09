@@ -9,6 +9,7 @@ function showError() {
     if (!(userEmail.checkValidity())) {
         userEmail.setCustomValidity("Please enter a valid email address")
     }
+
 }
 
 function checkEmailError() {
@@ -17,7 +18,7 @@ function checkEmailError() {
     } else {
         userEmail.setCustomValidity("");
     }
-    userEmail.reportValidity();
+    // userEmail.reportValidity();
 }
 
 function checkCountryError() {
@@ -26,7 +27,7 @@ function checkCountryError() {
     } else {
         userCountry.setCustomValidity("");
     }
-    userCountry.reportValidity();
+    // userCountry.reportValidity();
 }
 
 function checkZipError() {
