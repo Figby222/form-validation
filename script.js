@@ -15,6 +15,7 @@ function checkEmailError() {
     } else {
         userEmail.setCustomValidity("");
     }
+    userEmail.reportValidity();
 }
 
 function checkCountryError() {
