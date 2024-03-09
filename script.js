@@ -12,7 +12,7 @@ function showError() {
     checkZipError();
     checkPasswordError();
     checkConfirmPasswordError();
-
+    
     const emailError = document.querySelector('.email-error');
     emailError.textContent = userEmail.validationMessage;
 
@@ -106,6 +106,14 @@ userZip.addEventListener('input', checkZipError);
 userPassword.addEventListener('input', checkPasswordError);
 userConfirmPassword.addEventListener('input', checkConfirmPasswordError);
 submitBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    showError();
+    if (
+        checkEmailError() ||
+        checkCountryError() ||
+        checkZipError() ||
+        checkPasswordError() ||
+        checkConfirmPasswordError()
+    ) {
+        e.preventDefault();
+        showError();
+    }
 })
