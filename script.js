@@ -19,9 +19,12 @@ function checkEmailError() {
 }
 
 function checkCountryError() {
-    if (userCountry.value == "Select") {
-        userCountry.setCustomValidity("Please enter a country");
+    if (userCountry.value == "placeholder") {
+        userCountry.setCustomValidity("Please select a country");
+    } else {
+        userCountry.setCustomValidity("");
     }
+    userCountry.reportValidity();
 }
 
 userEmail.addEventListener('input', checkEmailError);
