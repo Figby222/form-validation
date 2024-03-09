@@ -9,6 +9,7 @@ function showError() {
     if (!(userEmail.checkValidity())) {
         userEmail.setCustomValidity("Please enter a valid email address")
     }
+
 }
 
 function checkEmailError() {
