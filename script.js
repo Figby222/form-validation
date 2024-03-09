@@ -38,3 +38,4 @@ function checkZipError() {
 }
 
 userEmail.addEventListener('input', checkEmailError);
+userZip.addEventListener('input', checkZipError);
