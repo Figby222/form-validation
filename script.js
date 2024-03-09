@@ -9,7 +9,6 @@ function showError() {
     if (!(userEmail.checkValidity())) {
         userEmail.setCustomValidity("Please enter a valid email address")
     }
-
 }
 
 function checkEmailError() {
@@ -69,3 +68,5 @@ function checkConfirmPasswordError() {
 
 userEmail.addEventListener('input', checkEmailError);
 userZip.addEventListener('input', checkZipError);
+userPassword.addEventListener('input', checkPasswordError);
+userConfirmPassword.addEventListener('input', checkConfirmPasswordError);
